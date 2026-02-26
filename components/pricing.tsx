@@ -44,7 +44,7 @@ export default function Pricing() {
 
         {/* Pricing Card */}
         <div className="mx-auto max-w-md lg:max-w-lg">
-          <div className="relative overflow-hidden rounded-3xl border border-gold/20 bg-blue-low backdrop-blur-xs shadow-[0_0_50px_rgba(234,179,8,0.15)] flex flex-col p-6 sm:p-8 text-center">
+          <div className="relative overflow-hidden rounded-3xl border border-gold/20 bg-blue-low/10 backdrop-blur-xs shadow-[0_0_50px_rgba(234,179,8,0.15)] flex flex-col p-6 sm:p-8 text-center">
             {/* Top gold accent glow inside the card */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-linear-to-r from-transparent via-gold/80 to-transparent blur-[2px]" />
 
