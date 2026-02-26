@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { BrandButton } from "@/components/brand-button";
+import { PrimaryHeading } from "@/components/primary-heading";
 import { ChevronRight } from "lucide-react";
 
 export default function Profession() {
   return (
     <section
       id="profession"
-      className="relative min-h-[600px] flex items-center overflow-hidden py-24"
+      className="relative min-h-[600px] bg-red-400 flex items-center overflow-hidden py-24"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -18,7 +19,7 @@ export default function Profession() {
           priority
         />
         {/* Dark overlay for text readability on mobile/smaller screens */}
-        <div className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-t from-midnight via-midnight/80 to-transparent pointer-events-none lg:h-full lg:w-[60%] lg:bg-linear-to-r lg:from-midnight lg:via-midnight/80 lg:to-transparent z-0" />
+        <div className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-t from-blue-low via-blue-low to-transparent pointer-events-none lg:h-full lg:w-[60%] lg:bg-linear-to-r lg:from-blue-low lg:via-blue-low lg:to-transparent z-0" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full flex flex-col justify-center">
@@ -38,21 +39,25 @@ export default function Profession() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-extrabold uppercase text-gold sm:text-4xl lg:text-5xl leading-tight">
-            Desvende os segredos <br className="hidden sm:block" />
-            do mercado financeiro
-          </h2>
+          <PrimaryHeading
+            title={
+              <>
+                Desvende os segredos <br className="hidden sm:block" /> do
+                mercado financeiro
+              </>
+            }
+            className="text-left mb-0 space-y-0"
+          />
 
-          <p className="max-w-md text-base sm:text-lg text-slate-300 leading-relaxed font-medium">
+          <p className="max-w-md text-base sm:text-lg text-white-muted leading-relaxed font-medium">
             Explore uma nova perspectiva do mercado financeiro através de
             conceitos revolucionários que desafiam as convenções tradicionais.
           </p>
 
           <div className="pt-4">
-            <Button
+            <BrandButton
               asChild
-              size="lg"
-              className="bg-gold-gradient text-midnight font-bold uppercase tracking-wide hover:opacity-90 transition-all hover:scale-105 px-8 py-7 text-sm sm:text-base rounded-md group"
+              className="px-8 py-7 text-sm sm:text-base rounded-md group"
             >
               <a href="#pricing">
                 Quero Fazer Parte
@@ -61,7 +66,7 @@ export default function Profession() {
                   strokeWidth={3}
                 />
               </a>
-            </Button>
+            </BrandButton>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { BrandButton } from "@/components/brand-button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -27,7 +27,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-midnight/95 backdrop-blur-md border-b border-gold/10 shadow-lg shadow-gold/5"
+          ? "bg-blue-low backdrop-blur-md border-b border-gold/10 shadow-lg shadow-gold/5"
           : "bg-transparent"
       }`}
     >
@@ -56,7 +56,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-slate-300 transition-colors hover:text-gold"
+                className="text-sm font-medium text-white-muted transition-colors hover:text-gold"
               >
                 {link.label}
               </a>
@@ -66,12 +66,9 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Button
-            asChild
-            className="bg-gold-gradient text-midnight font-bold uppercase tracking-wide hover:opacity-90 transition-opacity px-6 rounded-lg"
-          >
+          <BrandButton asChild className="px-6 rounded-lg">
             <a href="#pricing">Quero Começar</a>
-          </Button>
+          </BrandButton>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -90,25 +87,25 @@ export default function Navbar() {
           isMobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-gold/10 bg-midnight/98 backdrop-blur-lg px-6 py-6 space-y-4">
+        <div className="border-t border-gold/10 bg-blue-low backdrop-blur-lg px-6 py-6 space-y-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block text-base font-medium text-slate-300 hover:text-gold transition-colors"
+              className="block text-base font-medium text-white-muted hover:text-gold transition-colors"
               onClick={() => setIsMobileOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <Button
+          <BrandButton
             asChild
-            className="w-full bg-gold-gradient text-midnight font-bold uppercase tracking-wide hover:opacity-90 transition-opacity rounded-lg mt-2"
+            className="w-full text-midnight font-bold uppercase tracking-wide hover:opacity-90 transition-opacity rounded-lg mt-2"
           >
             <a href="#pricing" onClick={() => setIsMobileOpen(false)}>
               Quero Começar
             </a>
-          </Button>
+          </BrandButton>
         </div>
       </div>
     </header>

@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { PrimaryHeading } from "./primary-heading";
 
 export default function Instructor() {
   return (
     <section
       id="instructor"
-      className="relative w-full overflow-hidden bg-[#01030a] flex items-center min-h-[500px] lg:min-h-[700px]"
+      className="relative w-full overflow-hidden bg-blue-dark flex items-center min-h-[500px] lg:min-h-[700px]"
     >
       {/* Background Image Container (Left Side) */}
       <div className="absolute top-0 left-0 w-full lg:w-[65%] h-full z-0">
@@ -27,13 +28,21 @@ export default function Instructor() {
       <div className="relative z-10 w-full mx-auto max-w-7xl px-6 lg:px-8 flex justify-end">
         <div className="w-full lg:w-1/2 flex flex-col justify-center py-20 lg:py-24">
           {/* Header */}
+          {/* <PrimaryHeading
+            title={
+              <>
+                QUEM É{" "}
+                <span className="text-gold font-bold">EMERSON SOMENZARI?</span>
+              </>
+            }
+          /> */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white uppercase tracking-wide mb-8 drop-shadow-md">
             QUEM É{" "}
             <span className="text-gold font-bold">EMERSON SOMENZARI?</span>
           </h2>
 
           {/* Biography Text */}
-          <div className="space-y-6 text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+          <div className="space-y-6 text-sm sm:text-base text-white-muted leading-relaxed font-light">
             <p>
               Desde 2019,{" "}
               <strong className="text-white font-semibold">

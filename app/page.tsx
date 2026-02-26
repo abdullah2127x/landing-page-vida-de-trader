@@ -15,6 +15,7 @@ import Features from "@/components/features";
 import Training from "@/components/training";
 import Quotes from "@/components/quotes";
 import Partners from "@/components/partners";
+import { ArrowDown } from "lucide-react";
 
 export default function Home() {
   return (
@@ -26,20 +27,22 @@ export default function Home() {
         <Profession />
         <Stats />
         <Trade />
-
-        {/* extra */}
-        <About />
         <Benefits />
         <Features />
         <Training />
         <Instructor />
         <Quotes />
+
+        {/* extra */}
+        {/* <About /> */}
         <Pricing />
+
+        
         <Partners />
         <FAQ />
 
 
-        <Testimonials />
+        {/* <Testimonials /> */}
       </main>
       <Footer />
     </>

@@ -76,14 +76,14 @@ export default function Stats() {
   return (
     <section className="relative py-20 bg-section-gradient" ref={ref}>
       {/* Top separator line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="group relative flex flex-col items-center gap-3 rounded-xl border border-gold/20 bg-midnight-light/50 p-8 text-center transition-all duration-300 hover:border-gold/40 hover:bg-midnight-light/80"
+              className="group relative flex flex-col items-center gap-3 rounded-xl border border-gold/20 bg-linear-to-r from-blue-dark to-blue-light/20 p-8 text-center transition-all duration-300 hover:border-gold/40 hover:bg-linear-to-r hover:from-blue-dark hover:to-blue-light"
               style={{ animationDelay: `${i * 150}ms` }}
             >
               {/* Glow effect on hover */}
@@ -95,7 +95,7 @@ export default function Stats() {
                 suffix={stat.suffix}
                 isVisible={isVisible}
               />
-              <p className="relative text-sm font-medium uppercase tracking-wider text-slate-400">
+              <p className="relative text-sm font-medium uppercase tracking-wider text-white-muted">
                 {stat.label}
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function Stats() {
       </div>
 
       {/* Bottom separator line */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" />
     </section>
   );
 }

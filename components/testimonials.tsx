@@ -46,7 +46,7 @@ export default function Testimonials() {
             Descubra por que escolher{" "}
             <span className="text-gold-gradient">nosso treinamento</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-400">
+          <p className="mx-auto max-w-2xl text-lg text-white-muted">
             Veja o que nossos alunos têm a dizer sobre a transformação que o
             treinamento SMD trouxe para suas vidas.
           </p>
@@ -57,7 +57,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, i) => (
             <Card
               key={testimonial.name}
-              className="group relative overflow-hidden border-gold/15 bg-midnight-light/50 hover:border-gold/30 transition-all duration-300"
+              className="group relative overflow-hidden border-gold/15 bg-blue-low hover:border-gold/30 transition-all duration-300"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {/* Quote watermark */}
@@ -75,7 +75,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-slate-300 leading-relaxed italic">
+                <p className="text-white-muted leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
 

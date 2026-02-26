@@ -4,8 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { BrandButton } from "@/components/brand-button";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { PrimaryHeading } from "@/components/primary-heading";
 
 const questions = [
   {
@@ -38,16 +39,14 @@ export default function FAQ() {
   return (
     <section id="faq" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold">
-            Dúvidas Frequentes
-          </p>
-          <h2 className="text-3xl font-extrabold uppercase text-white sm:text-4xl lg:text-5xl">
-            Perguntas{" "}
-            <span className="text-gold-gradient">Frequentes</span>
-          </h2>
-        </div>
+        <PrimaryHeading
+          title={
+            <>
+              Perguntas <span className="font-extrabold block">Frequentes</span>
+            </>
+          }
+          // subtitle="Dúvidas Frequentes"
+        />
 
         {/* Accordion */}
         <Accordion type="single" collapsible className="space-y-3">
@@ -55,12 +54,12 @@ export default function FAQ() {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="border border-gold/15 rounded-xl px-6 bg-midnight-light/30 hover:border-gold/25 transition-colors data-[state=open]:border-gold/30 data-[state=open]:bg-midnight-light/60"
+              className="border border-gold/75  rounded-xl px-6 bg-blue-low hover:border-gold transition-colors data-[state=open]:border-gold data-[state=open]:bg-blue-low"
             >
-              <AccordionTrigger className="text-left text-base font-semibold text-slate-200 hover:text-gold transition-colors py-5 [&[data-state=open]]:text-gold">
+              <AccordionTrigger className="text-left text-base font-semibold text-white-muted hover:text-gold transition-colors py-5 data-[state=open]:text-gold ">
                 {item.q}
               </AccordionTrigger>
-              <AccordionContent className="text-slate-400 leading-relaxed pb-5">
+              <AccordionContent className="text-white-muted leading-relaxed pb-5">
                 {item.a}
               </AccordionContent>
             </AccordionItem>
@@ -68,18 +67,21 @@ export default function FAQ() {
         </Accordion>
 
         {/* CTA */}
+        
         <div className="mt-14 text-center">
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="border-gold/30 text-gold hover:bg-gold/10 hover:border-gold/50 px-10 py-6 text-base uppercase font-bold tracking-wide rounded-lg group transition-all"
-          >
-            <a href="#pricing">
-              Quero acessar o conteúdo
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
+          <BrandButton
+  asChild
+  brandVariant="outline"
+  className="px-10 py-7 text-sm sm:text-base border-4 border-gold"
+>
+  <a className="inline-flex items-center justify-center" href="#pricing">
+    Quero acessar o conteúdo
+    <ChevronRight
+      className="ml-2 h-6 w-6 text-gold group-hover:translate-x-1 transition-transform"
+      strokeWidth={7}
+    />
+  </a>
+</BrandButton>
         </div>
       </div>
     </section>

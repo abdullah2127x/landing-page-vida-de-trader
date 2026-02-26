@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PrimaryHeading } from "@/components/primary-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Droplets, ShieldAlert, BarChart3 } from "lucide-react";
 
@@ -33,21 +34,20 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold">
-            Treinamento SMD
-          </p>
-          <h2 className="text-3xl font-extrabold uppercase text-white sm:text-4xl lg:text-5xl">
-            O que é o{" "}
-            <span className="text-gold-gradient">Treinamento SMD</span>?
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-400 leading-relaxed">
-            O treinamento Smart Money Distribution é a metodologia que vai
-            transformar sua visão sobre o mercado financeiro e te preparar para
-            operar como um profissional.
-          </p>
-        </div>
+        <PrimaryHeading
+          title={
+            <>
+              O que é o{" "}
+              <span className="text-gold-gradient">Treinamento SMD</span>?
+            </>
+          }
+          subtitle="Treinamento SMD"
+        />
+        <p className="-mt-12 mb-16 mx-auto max-w-2xl text-lg text-white-muted leading-relaxed text-center">
+          O treinamento Smart Money Distribution é a metodologia que vai
+          transformar sua visão sobre o mercado financeiro e te preparar para
+          operar como um profissional.
+        </p>
 
         {/* Content Grid */}
         <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -70,15 +70,17 @@ export default function About() {
             {topics.map((topic, i) => (
               <Card
                 key={topic.title}
-                className="group border-gold/15 bg-midnight-light/50 hover:border-gold/30 hover:bg-midnight-light transition-all duration-300"
+                className="group border-gold/15 bg-blue-low hover:border-gold/30 hover:bg-blue-low transition-all duration-300"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 <CardContent className="p-6 space-y-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 text-gold group-hover:bg-gold/20 transition-colors">
                     <topic.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-white">{topic.title}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <h3 className="text-lg font-bold text-white">
+                    {topic.title}
+                  </h3>
+                  <p className="text-sm text-white-muted leading-relaxed">
                     {topic.description}
                   </p>
                 </CardContent>
