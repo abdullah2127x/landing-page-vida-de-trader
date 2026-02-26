@@ -74,7 +74,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="relative py-20 bg-section-gradient" ref={ref}>
+    <section id="stats" className="relative py-20 bg-section-gradient" ref={ref}>
       {/* Top separator line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" />
 

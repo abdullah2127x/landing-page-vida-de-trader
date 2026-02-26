@@ -18,10 +18,10 @@ export default function Instructor() {
         />
 
         {/* Desktop Gradient: Blends the image horizontally into the dark background on the right */}
-        <div className="absolute inset-0 bg-linear-to-r from-transparent from-40% via-[#01030a]/80 via-80% to-[#01030a] to-100% hidden lg:block" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent from-40% via-background/80 via-80% to-background to-100% hidden lg:block" />
 
         {/* Mobile Gradient: Blends the image vertically into the dark background at the bottom */}
-        <div className="absolute inset-0 bg-linear-to-t from-[#01030a] from-10% via-[#01030a]/60 via-40% to-transparent lg:hidden" />
+        <div className="absolute inset-0 bg-linear-to-t from-background from-10% via-background/60 via-40% to-transparent lg:hidden" />
       </div>
 
       {/* Content Container (Right Side) */}

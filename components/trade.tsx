@@ -7,8 +7,8 @@ export default function Trade() {
       className="relative py-24 lg:py-32 overflow-hidden bg-blue-dark"
     >
       {/* Background container restricted to the left side */}
-      {/* <div className="absolute inset-y-0 left-0 w-full lg:w-[55%]">
-        <div className="absolute inset-0 bg-[#020b1e]" />
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%]">
+        <div className="absolute inset-0 bg-blue-dark" />
 
         <div
           className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
@@ -20,8 +20,8 @@ export default function Trade() {
 
         <div className="absolute inset-0  bg-[radial-gradient(circle_at_center,rgba(10,35,90,0.6)_0%,rgba(2,11,30,0)_100%)] pointer-events-none" />
 
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#01030a] to-transparent pointer-events-none hidden lg:block" />
-      </div> */}
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent pointer-events-none hidden lg:block" />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 flex-col-reverse lg:flex-row items-center">

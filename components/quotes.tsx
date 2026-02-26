@@ -161,7 +161,7 @@ export default function Quotes() {
               return (
                 <div
                   key={idx}
-                  className="w-[75vw] sm:w-[350px] h-auto min-h-[480px] shrink-0 snap-center rounded-xl bg-[#030614] border border-gold/10 hover:border-gold/30 p-8 sm:p-10 flex flex-col justify-between transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+                  className="w-[75vw] sm:w-[350px] h-auto min-h-[480px] shrink-0 snap-center rounded-xl bg-blue-dark border border-gold/10 hover:border-gold/30 p-8 sm:p-10 flex flex-col justify-between transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]"
                 >
                   <div className="space-y-6">
                     <p className="text-white-muted text-sm sm:text-[15px] leading-relaxed font-light">
@@ -193,7 +193,7 @@ export default function Quotes() {
               return (
                 <div
                   key={idx}
-                  className="w-[75vw] sm:w-[550px] h-auto min-h-[300px] shrink-0 snap-center rounded-xl bg-[#030614] border border-gold/10 hover:border-gold/30 p-8 sm:p-10 flex flex-col justify-center transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+                  className="w-[75vw] sm:w-[550px] h-auto min-h-[300px] shrink-0 snap-center rounded-xl bg-blue-dark border border-gold/10 hover:border-gold/30 p-8 sm:p-10 flex flex-col justify-center transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]"
                 >
                   <h3 className="text-gold text-lg md:text-xl font-medium mb-6 tracking-wide">
                     {c.title}

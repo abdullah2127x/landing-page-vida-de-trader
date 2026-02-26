@@ -10,14 +10,14 @@
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
 
-  /* The Strict 5-Color Vida de Trader Theme */
-  --color-blue-dark: #010715;
-  --color-blue-low: #030e2a;
-  --color-gold: #f4ba4f;
-  --color-white: #ffffff;
-  --color-white-muted: #a1a1aa;
+  /* Variable-based Vida de Trader Theme */
+  --color-blue-dark: var(--blue-dark);
+  --color-blue-low: var(--blue-low);
+  --color-gold: var(--gold);
+  --color-white: var(--white);
+  --color-white-muted: var(--white-muted);
 
-  /* shadcn mappings forced to the 5 colors */
+  /* shadcn mappings forced to the colors */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -62,39 +62,46 @@
   --animate-shimmer: shimmer 3s linear infinite;
 }
 
-:root {
+:root, .light {
   --radius: 0.625rem;
-  --background: #010715;
-  --foreground: #ffffff;
-  --card: #030e2a;
-  --card-foreground: #ffffff;
-  --popover: #030e2a;
-  --popover-foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #010715;
+  --card: #f8fafc;
+  --card-foreground: #010715;
+  --popover: #ffffff;
+  --popover-foreground: #010715;
   --primary: #f4ba4f;
   --primary-foreground: #010715;
-  --secondary: #030e2a;
-  --secondary-foreground: #ffffff;
-  --muted: #030e2a;
-  --muted-foreground: #a1a1aa;
-  --accent: #030e2a;
-  --accent-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #010715;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #010715;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(234, 179, 8, 0.2);
-  --input: rgba(234, 179, 8, 0.15);
+  --border: #e2e8f0;
+  --input: #e2e8f0;
   --ring: #f4ba4f;
   --chart-1: #f4ba4f;
   --chart-2: #f4ba4f;
   --chart-3: #f4ba4f;
   --chart-4: #f4ba4f;
   --chart-5: #f4ba4f;
-  --sidebar: #030e2a;
-  --sidebar-foreground: #ffffff;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #010715;
   --sidebar-primary: #f4ba4f;
-  --sidebar-primary-foreground: #010715;
-  --sidebar-accent: #030e2a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(234, 179, 8, 0.2);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #010715;
+  --sidebar-border: #e2e8f0;
   --sidebar-ring: #f4ba4f;
+
+  /* Theme-specific colors */
+  --blue-dark: #f8fafc;
+  --blue-low: #f1f5f9;
+  --gold: #ca8a04;
+  --white: #010715;
+  --white-muted: #64748b;
 }
 
 .dark {
@@ -129,6 +136,13 @@
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(234, 179, 8, 0.2);
   --sidebar-ring: #f4ba4f;
+
+  /* Theme-specific colors */
+  --blue-dark: #010715;
+  --blue-low: #030e2a;
+  --gold: #f4ba4f;
+  --white: #ffffff;
+  --white-muted: #a1a1aa;
 }
 
 @layer base {
@@ -136,7 +150,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-blue-dark text-white;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   html {
     scroll-behavior: smooth;
@@ -145,30 +161,30 @@
 
 @layer utilities {
   .text-gold-gradient {
-    background: linear-gradient(135deg, #f4ba4f, #facc15, #ca8a04);
+    background: linear-gradient(135deg, var(--gold), #facc15, #ca8a04);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .border-gold-gradient {
-    border-image: linear-gradient(135deg, #f4ba4f, #ca8a04) 1;
+    border-image: linear-gradient(135deg, var(--gold), #ca8a04) 1;
   }
   .bg-gold-gradient {
-    background: linear-gradient(135deg, #f4ba4f, #facc15);
+    background: linear-gradient(135deg, var(--gold), #facc15);
   }
   .bg-midnight-gradient {
     background: linear-gradient(
       180deg,
-      var(--color-blue-low) 0%,
-      var(--color-blue-dark) 50%,
-      var(--color-blue-low) 100%
+      var(--blue-low) 0%,
+      var(--blue-dark) 50%,
+      var(--blue-low) 100%
     );
   }
   .bg-section-gradient {
     background: linear-gradient(
       180deg,
-      var(--color-blue-low) 0%,
-      var(--color-blue-dark) 100%
+      var(--blue-low) 0%,
+      var(--blue-dark) 100%
     );
   }
 }
