@@ -72,6 +72,27 @@ export default function Modules() {
           </p>
         </div>
 
+        {/* Course Descriptions */}
+        <div className="mx-auto max-w-5xl space-y-8 mb-16 text-left">
+          <div className="space-y-3">
+            <h3 className="text-lg md:text-xl font-bold text-gold">
+              Vida de Trader - Página de Vendas
+            </h3>
+            <p className="text-sm md:text-base text-white font-medium leading-relaxed">
+              <span className="text-slate-300 font-bold">PT-BR |</span> Emerson Somenzari se destaca como trader, conhecido por sua habilidade em ensinar a estratégia Smart Money de forma clara e acessível. Com amplo conhecimento do mercado financeiro, ele é reconhecido como uma autoridade nesse campo.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-lg md:text-xl font-bold text-gold">
+              Vida de Trader - Landing Page
+            </h3>
+            <p className="text-sm md:text-base text-white font-medium leading-relaxed">
+              <span className="text-gold font-bold">EN |</span> Emerson Somenzari excels as a trader, renowned for his clear and accessible instruction on the Smart Money strategy. With deep expertise in the financial market, he's widely acknowledged as a top authority in this field.
+            </p>
+          </div>
+        </div>
+
         {/* Modules Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {modules.map((mod, i) => (
